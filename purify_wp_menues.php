@@ -11,7 +11,7 @@
  * Plugin Name:       Purify WordPress Menus
  * Plugin URI:        https://wordpress.org/plugins/purify-wp-menues/
  * Description:       Slim down the HTML code of WordPress menus to only the CSS classes and ID attributes your theme needs to improve page speed
- * Version:           3.3.1
+ * Version:           3.3.2
  * Requires at least: 3.0
  * Requires PHP:      5.2
  * Author:            Kybernetik Services
