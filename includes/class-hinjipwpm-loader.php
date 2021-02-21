@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://stehle-internet.de/
+ * @link       https://www.kybernetik-services.com
  * @since      3.0
  *
  * @package    Hinjipwpm
@@ -19,7 +19,7 @@
  *
  * @package    Hinjipwpm
  * @subpackage Hinjipwpm/includes
- * @author     Martin Stehle <shop@stehle-internet.de>
+ * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
 class Hinjipwpm_Loader {
 

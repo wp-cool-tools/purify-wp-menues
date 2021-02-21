@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the dashboard.
  *
- * @link       http://stehle-internet.de/
+ * @link       https://www.kybernetik-services.com
  * @since      3.0
  *
  * @package    Hinjipwpm
@@ -25,7 +25,7 @@
  * @since      3.0
  * @package    Hinjipwpm
  * @subpackage Hinjipwpm/includes
- * @author     Martin Stehle <shop@stehle-internet.de>
+ * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
 class Hinjipwpm {
 

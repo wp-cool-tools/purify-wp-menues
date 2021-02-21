@@ -3,7 +3,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @link       http://stehle-internet.de/
+ * @link       https://www.kybernetik-services.com
  * @since      3.0
  *
  * @package    Hinjipwpm

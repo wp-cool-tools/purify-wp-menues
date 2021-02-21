@@ -3,7 +3,7 @@
 /**
  * The plugin bootstrap file
  *
- * @link              http://stehle-internet.de/
+ * @link              https://www.kybernetik-services.com
  * @since             3.0
  * @package           Hinjipwpm
  *
@@ -14,8 +14,8 @@
  * Version:           3.3.1
  * Requires at least: 3.0
  * Requires PHP:      5.2
- * Author:            Martin Stehle
- * Author URI:        http://stehle-internet.de/
+ * Author:            Kybernetik Services
+ * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=purify-wp-menues&utm_content=author
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       hinjipwpm

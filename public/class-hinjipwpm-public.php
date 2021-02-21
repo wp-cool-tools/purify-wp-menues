@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://stehle-internet.de/
+ * @link       https://www.kybernetik-services.com
  * @since      3.0
  *
  * @package    Hinjipwpm
@@ -18,7 +18,7 @@
  *
  * @package    Hinjipwpm
  * @subpackage Hinjipwpm/public
- * @author     Martin Stehle <shop@stehle-internet.de>
+ * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
 class Hinjipwpm_Public {
 
