@@ -24,7 +24,7 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm_i18n {
+class PWM_i18n {
 
 	/**
 	 * The domain specified for this plugin.

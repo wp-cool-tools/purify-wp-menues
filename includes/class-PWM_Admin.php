@@ -20,7 +20,7 @@
  * @subpackage Hinjipwpm/admin
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm_Admin {
+class PWM_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -131,7 +131,7 @@ class Hinjipwpm_Admin {
 	 */
 	public function main() {
 		// print options page
-		include_once( 'partials/hinjipwpm-admin-display.php' );
+		include_once( PWM_ROOT . '/admin/partials/hinjipwpm-admin-display.php' );
 	}
 
 	/**
@@ -145,10 +145,10 @@ class Hinjipwpm_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Hinjipwpm_Loader as all of the hooks are defined
+		 * defined in PWM_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Hinjipwpm_Loader will then create the relationship
+		 * The PWM_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -159,7 +159,7 @@ class Hinjipwpm_Admin {
 
 		$screen = get_current_screen();
 		if ( $this->plugin_screen_id == $screen->id ) {
-			wp_enqueue_style( $this->hinjipwpm, plugin_dir_url( __FILE__ ) . 'css/hinjipwpm-admin.css', array(), $this->version, 'all' );
+			wp_enqueue_style( $this->hinjipwpm, PWM_DIR_URL . 'admin/css/hinjipwpm-admin.css', array(), $this->version, 'all' );
 		}
 
 	}
@@ -175,10 +175,10 @@ class Hinjipwpm_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Hinjipwpm_Loader as all of the hooks are defined
+		 * defined in PWM_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Hinjipwpm_Loader will then create the relationship
+		 * The PWM_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -189,7 +189,7 @@ class Hinjipwpm_Admin {
 
 		$screen = get_current_screen();
 		if ( $this->plugin_screen_id == $screen->id ) {
-			wp_enqueue_script( $this->hinjipwpm, plugin_dir_url( __FILE__ ) . 'js/hinjipwpm-admin.js', array( 'jquery' ), $this->version, false );
+			wp_enqueue_script( $this->hinjipwpm, PWM_DIR_URL . 'js/hinjipwpm-admin.js', array( 'jquery' ), $this->version, false );
 		}
 
 	}

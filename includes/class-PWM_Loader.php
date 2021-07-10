@@ -21,7 +21,7 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm_Loader {
+class PWM_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

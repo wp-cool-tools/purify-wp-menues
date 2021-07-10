@@ -27,7 +27,7 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm {
+class PWM_Default {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Hinjipwpm {
 	 *
 	 * @since    3.0
 	 * @access   protected
-	 * @var      Hinjipwpm_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      PWM_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -96,7 +96,7 @@ class Hinjipwpm {
 	public function __construct() {
 
 		$this->hinjipwpm = 'hinjipwpm';
-		$this->version = '3.3.1';
+		$this->version = '3.3.3';
 		$this->settings_db_slug = 'purify_wp_menu_options_set';
 		$this->default_settings = array(
 			'pwpm_backward_compatibility_with_wp_page_menu' => 0,
@@ -144,10 +144,10 @@ class Hinjipwpm {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Hinjipwpm_Loader. Orchestrates the hooks of the plugin.
-	 * - Hinjipwpm_i18n. Defines internationalization functionality.
-	 * - Hinjipwpm_Admin. Defines all hooks for the dashboard.
-	 * - Hinjipwpm_Public. Defines all hooks for the public side of the site.
+	 * - PWM_Loader. Orchestrates the hooks of the plugin.
+	 * - PWM_i18n. Defines internationalization functionality.
+	 * - PWM_Admin. Defines all hooks for the dashboard.
+	 * - PWM_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -157,37 +157,14 @@ class Hinjipwpm {
 	 */
 	private function load_dependencies() {
 
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-hinjipwpm-loader.php';
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-hinjipwpm-i18n.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the Dashboard.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-hinjipwpm-admin.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-hinjipwpm-public.php';
-
-		$this->loader = new Hinjipwpm_Loader();
+		$this->loader = new PWM_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Hinjipwpm_i18n class in order to set the domain and to register the hook
+	 * Uses the PWM_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    3.0
@@ -195,7 +172,7 @@ class Hinjipwpm {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Hinjipwpm_i18n();
+		$plugin_i18n = new PWM_i18n();
 		$plugin_i18n->set_domain( $this->get_hinjipwpm() );
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
@@ -211,7 +188,7 @@ class Hinjipwpm {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Hinjipwpm_Admin( $this->get_hinjipwpm(), $this->get_version(), $this->get_stored_settings(), $this->get_settings_db_slug() );
+		$plugin_admin = new PWM_Admin( $this->get_hinjipwpm(), $this->get_version(), $this->get_stored_settings(), $this->get_settings_db_slug() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		//$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -246,7 +223,7 @@ class Hinjipwpm {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Hinjipwpm_Public( $this->get_hinjipwpm(), $this->get_version(), $this->get_stored_settings() );
+		$plugin_public = new PWM_Public( $this->get_hinjipwpm(), $this->get_version(), $this->get_stored_settings() );
 
 		//$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		//$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -289,7 +266,7 @@ class Hinjipwpm {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     3.0
-	 * @return    Hinjipwpm_Loader    Orchestrates the hooks of the plugin.
+	 * @return    PWM_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

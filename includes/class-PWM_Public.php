@@ -20,7 +20,7 @@
  * @subpackage Hinjipwpm/public
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm_Public {
+class PWM_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -75,15 +75,15 @@ class Hinjipwpm_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Hinjipwpm_Loader as all of the hooks are defined
+		 * defined in PWM_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Hinjipwpm_Loader will then create the relationship
+		 * The PWM_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->hinjipwpm, plugin_dir_url( __FILE__ ) . 'css/hinjipwpm-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->hinjipwpm, PWM_DIR_URL . 'css/hinjipwpm-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -98,15 +98,15 @@ class Hinjipwpm_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Hinjipwpm_Loader as all of the hooks are defined
+		 * defined in PWM_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Hinjipwpm_Loader will then create the relationship
+		 * The PWM_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->hinjipwpm, plugin_dir_url( __FILE__ ) . 'js/hinjipwpm-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->hinjipwpm, PWM_DIR_URL . 'js/hinjipwpm-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

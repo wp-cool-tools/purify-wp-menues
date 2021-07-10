@@ -11,7 +11,7 @@
  * Plugin Name:       Purify WordPress Menus
  * Plugin URI:        https://wordpress.org/plugins/purify-wp-menues/
  * Description:       Slim down the HTML code of WordPress menus to only the CSS classes and ID attributes your theme needs to improve page speed
- * Version:           3.3.2
+ * Version:           3.3.3
  * Requires at least: 3.0
  * Requires PHP:      5.2
  * Author:            Kybernetik Services
@@ -27,13 +27,23 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define( 'PWM_ROOT', plugin_dir_path( __FILE__ ) );
+define( 'PWM_DIR_URL', plugin_dir_url( __FILE__ ) );
+
+function pwm_autoloader( $class_name )
+{
+    if ( false !== strpos( $class_name, 'PWM_' ) ) {
+        include PWM_ROOT . 'includes/class-' . $class_name . '.php';
+    }
+}
+spl_autoload_register('pwm_autoloader');
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-hinjipwpm-activator.php
  */
 function activate_hinjipwpm() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-hinjipwpm-activator.php';
-	Hinjipwpm_Activator::activate();
+	PWM_Activator::activate();
 }
 
 /**
@@ -41,18 +51,11 @@ function activate_hinjipwpm() {
  * This action is documented in includes/class-hinjipwpm-deactivator.php
  */
 function deactivate_hinjipwpm() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-hinjipwpm-deactivator.php';
-	Hinjipwpm_Deactivator::deactivate();
+	PWM_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_hinjipwpm' );
 register_deactivation_hook( __FILE__, 'deactivate_hinjipwpm' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * dashboard-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/class-hinjipwpm.php';
 
 /**
  * Begins execution of the plugin.
@@ -65,7 +68,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-hinjipwpm.php';
  */
 function run_hinjipwpm() {
 
-	$plugin = new Hinjipwpm();
+	$plugin = new PWM_Default();
 	$plugin->run();
 
 }

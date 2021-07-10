@@ -1,11 +1,11 @@
 === Purify WordPress Menus ===
 Contributors: kybernetikservices,Hinjiriyo
-Donate link: https://www.paypal.com/donate?hosted_button_id=MJSPU229YM8W4
+Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: plugin, navigation, menu, menus, navigation menus, page menus, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
 Requires at least: 3.0
 Requires PHP: 5.2
-Tested up to: 5.5.1
-Stable tag: 3.3.2
+Tested up to: 5.7
+Stable tag: 3.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +139,14 @@ If you want to contribute a translation of the plugin in your language it would 
 3. The third screen shot shows where you can find the link to the plugin's option page in the german version of WordPress.
 
 == Changelog ==
+= 3.3.3 =
+* code improvements
+* Tested successfully with WordPress 5.8
+
+= 3.3.2 =
+* new branding
+* Tested successfully with WordPress 5.6.2
+* Tested successfully with WordPress 5.7
 
 = 3.3.1 =
 * Added missing default setting
@@ -253,6 +261,9 @@ Successfully tested with WordPress 4.0
 * The plugin was released initially.
 
 == Upgrade Notice ==
+
+= 3.3.3 =
+Some code improvements and prepared for WordPress 5.8
 
 = 3.3.1 =
 Added missing default setting, revised settings getter function

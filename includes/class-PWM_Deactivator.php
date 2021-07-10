@@ -20,7 +20,7 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm_Deactivator {
+class PWM_Deactivator {
 
 	/**
 	 * Short Description. (use period)

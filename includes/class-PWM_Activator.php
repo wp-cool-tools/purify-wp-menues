@@ -20,7 +20,7 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
-class Hinjipwpm_Activator {
+class PWM_Activator {
 
 	/**
 	 * Do all neccessary activation tasks.
