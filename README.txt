@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: plugin, navigation, menu, menus, navigation menus, page menus, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
 Requires at least: 3.0
 Requires PHP: 5.2
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 3.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,9 +28,12 @@ This plugin deletes the CSS classes you do not need in a navigation menu and pag
 * **Number 6** in [13 Great Free HTML Widgets for WordPress](http://wpaisle.com/wordpress-widgets/free-html-widgets-for-wordpress/) by sam on August 27, 2014
 * **Number 8** in [10 Magnificent Free Menus Widgets for WordPress](http://creativevore.com/wordpress/free-menus-widgets-for-wordpress/) by jatin on July 26, 2014
 
-= No undesiderable visual effects =
+= Demo =
+You want to test Purify WordPress Menus before installing on your site? Try it out on your free dummy site and [click here](https://demo.tastewp.com/purify-wp-menues).
 
-The visual appereance of menus in the frontend remains unchanged in most cases. If you should see an undesirable visual effect to the menus in your theme you can activate the needed CSS classes on the plugin's options page.
+= No undesirable visual effects =
+
+The visual appearance of menus in the frontend remains unchanged in most cases. If you should see an undesirable visual effect to the menus in your theme you can activate the needed CSS classes on the plugin's options page.
 
 = Deactivate it and keep your settings =
 
@@ -134,14 +137,15 @@ If you want to contribute a translation of the plugin in your language it would 
 
 == Screenshots ==
 
-1. The first screen shot shows a sample of the results of the HTML output of wp_nav_menu() before and after activating the plugin.
-2. The second screen shot shows a part of the plugin's options page in german language.
-3. The third screen shot shows where you can find the link to the plugin's option page in the german version of WordPress.
+1. The first screenshot shows a sample of the results of the HTML output of wp_nav_menu() before and after activating the plugin.
+2. The second screenshot shows a part of the plugin's options page in german language.
+3. The third screenshot shows where you can find the link to the plugin's option page in the german version of WordPress.
 
 == Changelog ==
 = 3.3.3 =
 * code improvements
 * Tested successfully with WordPress 5.8
+* Tested successfully with WordPress 5.9
 
 = 3.3.2 =
 * new branding
