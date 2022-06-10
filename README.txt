@@ -1,28 +1,31 @@
 === Purify WordPress Menus ===
 Contributors: kybernetikservices,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
-Tags: plugin, navigation, menu, menus, navigation menus, page menus, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
+Tags: plugin, navigation, menu, menus, navigation menus, page menus, category list, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
 Requires at least: 3.0
 Requires PHP: 5.2
-Tested up to: 5.9
-Stable tag: 3.3.3
+Tested up to: 6.0
+Stable tag: 3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Improve page speed by letting slim down the HTML code of menus to the only CSS classes and attributes your theme needs.
+Improve page speed by letting slim down the HTML code of menus and category lists to the only CSS classes and attributes your theme needs.
 
 == Description ==
 
-Improve page speed by letting slim down the HTML code of menus to the only CSS classes and attributes your theme needs.
+Improve page speed by letting slim down the HTML code of menus and category lists to the only CSS classes and attributes your theme needs.
 
 The plugin is available in English, Spanish (Español) and German (Deutsch).
 
 = Less code, higher page speed =
 
-This plugin deletes the CSS classes you do not need in a navigation menu and page menu. It slims down the HTML code of Wordpress menus to the only neccessary CSS classes you want for your theme. This results in less HTML code and so in higher page speed.
+This plugin deletes the CSS classes you do not need in a navigation menu, page menu and category list. It slims down the HTML code of Wordpress menus and category lists to the only neccessary CSS classes you want for your theme. This results in less HTML code and thus in higher page speed.
+
+If you are very concerned about the loading time of your website and you do not manage to gain seconds or tenths in the loading of the site with 3rd party caching plugins, you may find it interesting to experiment with the plugin Purify WordPress Menus and evaluate its possibilities.
 
 = What users said =
 
+* *...interesante experimentar...* in [Reduce CSS en WordPress y mejora la carga](https://www.webempresa.com/blog/reduce-css-en-wordpress-y-mejora-la-carga.html) by  Luis Méndez Alejo on August 20, 2015
 * **Number 1** in [Cool List of Free Navigation Menu WordPress Plugins](http://codeknows.com/inspiration/free-navigation-menu-wordpress-plugins/) by Inspiration on January 8, 2015
 * **Number 7** in [13 Excellent Free WordPress Widgets for Menus](http://cssclick.com/wordpress/free-wordpress-widgets-for-menus/) by mike on November 24, 2014
 * **Number 6** in [13 Great Free HTML Widgets for WordPress](http://wpaisle.com/wordpress-widgets/free-html-widgets-for-wordpress/) by sam on August 27, 2014
@@ -33,11 +36,11 @@ You want to test Purify WordPress Menus before installing on your site? Try it o
 
 = No undesirable visual effects =
 
-The visual appearance of menus in the frontend remains unchanged in most cases. If you should see an undesirable visual effect to the menus in your theme you can activate the needed CSS classes on the plugin's options page.
+The visual appearance of menus and category lists in the frontend remains unchanged in most cases. If you should see an undesirable visual effect to the menus and category lists in your theme, then you can activate the needed CSS classes on the plugin's options page.
 
 = Deactivate it and keep your settings =
 
-If you deactivate the plugin, your settings remains. If you activate the plugin again your last settings will be used. You do not need to go over all settings again.
+If you deactivate the plugin, your settings remains. If you activate the plugin again, your last settings will be used. You do not need to go over all settings again.
 
 = Residue-free deletion =
 
@@ -45,11 +48,11 @@ If you delete the plugin via the WordPress 'Plugin' menu, your settings will be 
 
 = Default setting: Marks the current menu item only =
 
-The default setting is to output only the CSS classes for the current menu item.
+The default setting is to output only the CSS classes for the current navigation menu item.
 
-= Stops displaying CSS classes of parents and ancestors of menu items =
+= Stops displaying CSS classes of parents and ancestors of menu items and category list items =
 
-Menu items which are parents of the current item will not be classified as ancestors additionally. The output of class="current-menu-ancestor current-menu-parent" is reduced to class="current-menu-parent".
+If activated by yourself, then items which are parents of the current item will not be classified as ancestors additionally. You can set that separately for both menus and category lists.
 
 = Stops displaying CSS classes of outdated page menus =
 
@@ -59,15 +62,19 @@ This plugin filters out the old CSS classes of page menus in navigation menus. U
 
 This plugin deletes the ID attribute of each menu item. In most cases the ID of every menu item is not needed.
 
+= Stops displaying CSS classes of category lists =
+
+This plugin filters out the CSS classes of each item in category lists.
+
 = Uses WordPress standard functions =
 
-This plugin hooks into the WordPress core functions wp_nav_menu() and wp_page_menu(). It changed the results of both functions to the settings you chose.
+This plugin hooks into the WordPress core functions `wp_nav_menu()`, `wp_page_menu()` and `wp_list_categories()`. It changes the results of those functions to the settings you have done.
 
 = Switch on and off every CSS menu item class =
 
 You can:
 
-* select and deselect in detail every CSS menu item class the WordPress core functions wp_nav_menu() and wp_page_menu() generate
+* select and deselect in detail every CSS menu item class the WordPress core functions `wp_nav_menu()`, `wp_page_menu()` and `wp_list_categories()` generate
 * control whether the id attribute of each navigation menu item is printed out or not
 * control whether parent items will be additionally classified as ancestors item or not. You can activate to print out both classes on parent items or just parents classes
 * control whether navigation menus will be additionally classified with the older page menu classes for compatibility or not.
@@ -101,35 +108,35 @@ Further translations are welcome. If you want to give in your translation please
 
 == Frequently Asked Questions ==
 
-= Does the plugin take effects on both navigation menus and page menus? =
+= Does the plugin take effects on navigation menus, page menus and category lists? =
 
 Yes, it does.
 
-= Does the plugin take effects on the visual appeareance of menus? =
+= Does the plugin take effects on the visual appearance of the menus and the category lists? =
 
 Short answer: Normally not and if yes, you can take control of it.
 
-Long answer: The default settings print out only the CSS class for the current active menu item. If the theme's CSS uses also the other CSS classes and/or item ID attribute you will notice some undesirable visual effects on menus. In this case just find out which classes and/or IDs the theme uses and activate them via the plugin's options page until the effects disappear.
+Long answer: The default settings print out only the CSS class for the current active menu item. If the theme's CSS uses also the other CSS classes and/or item ID attributes you will notice some undesirable visual effects on menus and category lists. In this case just find out which classes and/or IDs the theme uses and activate them via the plugin's options page until the effects disappear.
 
 = What are the default settings of this plugin? =
 
-After activating the plugin deletes the id attributes an all CSS classes on every menue item except the CSS classes ".current-menu-item" in navigation menus and ".current_page_item" in page menus.
+After activating the plugin deletes the id attributes an all CSS classes on every menu item except the CSS classes `.current-menu-item` in navigation menus and `.current_page_item` in page menus.
 
 = What happens with my settings if I would deactivate the plugin through the 'Plugins' menu in WordPress? =
 
-Your settings will be still stored in the WordPress database. After you re-activate the plugin all your settings are back.
+Your settings will be still stored in the WordPress database. After you re-activate the plugin, all your settings are back.
 
 = What happens with my settings if I would delete the plugin through the 'Plugins' menu in WordPress? =
 
 Your settings will be deleted, too. In other words: There would not remain any useless settings of this plugin.
 
-= Would this plugin also deletes the id attribute of every menu item? =
+= Would this plugin also deletes the ID attribute of every menu item? =
 
 Yes. It does this way as default. You can activate the output of every menu item's id on the plugin's options page.
 
-= Why is in page menus still the empty attribute ' class=""' at every menu item? =
+= Why is in page menus still the empty attribute `class=""` at every menu item? =
 
-Normally, if you deselect every checkbox for page menus on the plugin's options page no class attribute should be there in page menus. But the WordPress files does not offer a gentle way to suppress the class attribute if it has no values. The plugin saves time and ressources by not trying an own way. If you would have a trick for deleting the empty class attibute with little effort please tell me about it.
+Normally, if you deselect every checkbox for page menus on the plugin's options page, no class attribute should be there in page menus. But the WordPress files does not offer a gentle way to suppress the class attribute if it has no values. The plugin saves time and ressources by not trying an own way. If you would have a trick for deleting the empty class attibute with little effort, then please tell me about it.
 
 = Where is the *.pot file for translating the plugin in any language? =
 
@@ -137,20 +144,28 @@ If you want to contribute a translation of the plugin in your language it would 
 
 == Screenshots ==
 
-1. The first screenshot shows a sample of the results of the HTML output of wp_nav_menu() before and after activating the plugin.
+1. The first screenshot shows a sample of the results of the HTML output of `wp_nav_menu()` before and after activating the plugin.
 2. The second screenshot shows a part of the plugin's options page in german language.
 3. The third screenshot shows where you can find the link to the plugin's option page in the german version of WordPress.
 
 == Changelog ==
+= 3.4 =
+* added option 'Print CSS class for each category list item'
+* added option 'Print CSS class for each category list item with category ID'
+* added option 'Print CSS class for each current category list item'
+* added option 'Print CSS class for each current category parent list item'
+* added option 'Print CSS class for each current category ancestor list item'
+* added option 'Suppress ancestor class at current category parent item'
+* tested successfully with WordPress 6.0
+
 = 3.3.3 =
 * code improvements
-* Tested successfully with WordPress 5.8
-* Tested successfully with WordPress 5.9
+* tested successfully with WordPress 5.8
 
 = 3.3.2 =
 * new branding
-* Tested successfully with WordPress 5.6.2
-* Tested successfully with WordPress 5.7
+* tested successfully with WordPress 5.6.2
+* tested successfully with WordPress 5.7
 
 = 3.3.1 =
 * Added missing default setting
@@ -265,6 +280,9 @@ Successfully tested with WordPress 4.0
 * The plugin was released initially.
 
 == Upgrade Notice ==
+
+= 3.4 =
+Added options for category lists and tested with WordPress 6.0
 
 = 3.3.3 =
 Some code improvements and prepared for WordPress 5.8

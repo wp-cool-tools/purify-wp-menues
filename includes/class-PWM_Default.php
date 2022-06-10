@@ -96,7 +96,7 @@ class PWM_Default {
 	public function __construct() {
 
 		$this->hinjipwpm = 'hinjipwpm';
-		$this->version = '3.3.3';
+		$this->version = '3.4';
 		$this->settings_db_slug = 'purify_wp_menu_options_set';
 		$this->default_settings = array(
 			'pwpm_backward_compatibility_with_wp_page_menu' => 0,
@@ -239,6 +239,9 @@ class PWM_Default {
 		if ( isset( $this->current_settings[ 'pwpm_print_menu_item_id' ] ) && 0 == $this->current_settings[ 'pwpm_print_menu_item_id' ] ) {
 			$this->loader->add_action( 'nav_menu_item_id', $plugin_public, 'purify_custom_menu_item_id' );
 		}
+
+		// Purify WP category navigation lists, since version 3.4
+		$this->loader->add_action( 'category_css_class', $plugin_public, 'purify_category_list_item_classes', 10, 2 );
 
 	}
 

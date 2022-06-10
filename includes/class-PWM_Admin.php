@@ -449,6 +449,37 @@ class PWM_Admin {
 					),
 				),
 			), // end 6th_section
+			'7th_section' => array( // since version 3.4
+				'headline' => __( 'General Category List Items', 'hinjipwpm' ),
+				'description' => __( 'In this section you control the general classes Wordpress adds to category list items.', 'hinjipwpm' ),
+				'options' => array(
+					'pwpm_print_cat_item' => array(
+						'title'   => '.cat-item',
+						'label'   => __( 'This class is added to every category list item.', 'hinjipwpm' ),
+					),
+					'pwpm_print_cat_item_id' => array(
+						'title'   => '.cat-item-{id}',
+						'label'   => __( 'This class with the item id is added to every category list item.', 'hinjipwpm' ),
+					),
+					'pwpm_print_current_cat' => array(
+						'title'   => '.current-cat',
+						'label'   => __( 'This class is added to category list items that correspond to the currently rendered category.', 'hinjipwpm' ),
+					),
+					'pwpm_print_current_cat_parent' => array(
+						'title'   => '.current-cat-parent',
+						'label'   => __( 'This class is added to category list items that correspond to the hierarchical parent of the currently rendered category.', 'hinjipwpm' ),
+					),
+					'pwpm_print_current_cat_ancestor' => array(
+						'title'   => '.current-cat-ancestor',
+						'label'   => __( 'This class is added to category list items that correspond to a hierarchical ancestor of the currently rendered category.', 'hinjipwpm' ),
+					),
+					'pwpm_do_not_print_cat_parent_as_ancestor' => array(
+						'title'   => __( 'Do not print the category parent as the category ancestor.', 'hinjipwpm' ),
+						'label'   => __( 'Does not classified the category list item which is the current parent as anchestor.', 'hinjipwpm' ),
+					),
+				),
+			), // end 7th_section
+
 		);
 		// build form with sections and options
 		foreach ( $this->form_structure as $section_key => $section_values ) {
@@ -550,5 +581,6 @@ class PWM_Admin {
 	public function print_section_4th_section () { printf( "<p>%s</p>\n", esc_html( $this->form_structure[ '4th_section' ][ 'description' ] ) ); }
 	public function print_section_5th_section () { printf( "<p>%s</p>\n", esc_html( $this->form_structure[ '5th_section' ][ 'description' ] ) ); }
 	public function print_section_6th_section () { printf( "<p>%s</p>\n", esc_html( $this->form_structure[ '6th_section' ][ 'description' ] ) ); }
+	public function print_section_7th_section () { printf( "<p>%s</p>\n", esc_html( $this->form_structure[ '7th_section' ][ 'description' ] ) ); }
 
 }

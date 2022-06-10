@@ -387,5 +387,81 @@ class PWM_Public {
 		return array_intersect( $css_classes, $classes );
 	} // end purify_page_menu_item_classes()
 
+	/**
+	* Clean the CSS classes of items in navigation menus
+	*
+	* @since   3.4
+	*
+	* @param   array    $css_classes    Strings wp_nav_menu() builded for a single menu item
+	* @uses    $settings
+	* @uses    purify_page_menu_item_classes()
+	* @return  array|string             Empty string if param is not an array, else the array with strings for the menu item
+	*/
+	public function purify_category_list_item_classes ( $css_classes, $cat_item ) {
+		if ( ! is_array( $css_classes ) ) {
+			return array();
+		}
+
+		$item_is_parent = false;
+		$classes = array();
+
+		foreach ( $css_classes as $class ) {
+
+			// This class is added to every cat item. 
+			if ( isset( $this->settings['pwpm_print_cat_item'] ) && 1 == $this->settings['pwpm_print_cat_item'] && 'cat-item' == $class ) {
+				$classes[] = $class;
+				continue;
+			}
+
+			// This class with the item id is added to every cat item. 
+			if ( isset( $this->settings['pwpm_print_cat_item_id'] ) && 1 == $this->settings['pwpm_print_cat_item_id'] && 'cat-item-' . $cat_item->cat_ID == $class ) {
+				$classes[] = $class;
+				continue;
+			}
+
+			// This class is added to cat items that correspond to the currently rendered page. 
+			if ( isset( $this->settings['pwpm_print_current_cat'] ) && 1 == $this->settings['pwpm_print_current_cat'] && 'current-cat' == $class ) {
+				$classes[] = $class;
+				continue;
+			}
+
+			// This class is added to cat items that correspond to the hierarchical parent of the currently rendered page. 
+			if ( isset( $this->settings['pwpm_print_current_cat_parent'] ) && 1 == $this->settings['pwpm_print_current_cat_parent'] && 'current-cat-parent' == $class ) {
+				$classes[] = $class;
+				$item_is_parent = true;
+				continue;
+			}
+
+			// This class is added to cat items that correspond to a hierarchical ancestor of the currently rendered page. 
+			if ( isset( $this->settings['pwpm_print_current_cat_ancestor'] ) && 1 == $this->settings['pwpm_print_current_cat_ancestor'] && 'current-cat-ancestor' == $class ) {
+				$classes[] = $class;
+				continue;
+			}
+
+		} // end foreach()
+
+		// delete ancestor classes if users does not wish them on parent items
+		if ( isset( $this->settings['pwpm_do_not_print_cat_parent_as_ancestor'] ) && 1 == $this->settings['pwpm_do_not_print_cat_parent_as_ancestor'] && $item_is_parent ) {
+			// regular expression search on array values
+			$keys = array();
+			foreach ( $classes as $key => $val ) {
+				if ( 'current-cat-ancestor' === $val ) {
+					$keys[] = $key;
+				}
+			}
+			// delete ancestor classes if found
+			if ( $keys ) {
+				foreach ( $keys as $key ) {
+					unset( $classes[ $key ] );
+				}
+			}
+		} // end if()
+
+		// Return the new set of css classes for the item
+		//return array_intersect( $css_classes, $classes );
+		return $classes;
+
+	} // end purify_category_list_item_classes()
+
 
 }
