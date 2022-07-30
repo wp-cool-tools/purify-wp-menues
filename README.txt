@@ -5,7 +5,7 @@ Tags: plugin, navigation, menu, menus, navigation menus, page menus, category li
 Requires at least: 3.0
 Requires PHP: 5.2
 Tested up to: 6.0
-Stable tag: 3.4
+Stable tag: 3.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,7 +48,7 @@ If you delete the plugin via the WordPress 'Plugin' menu, your settings will be 
 
 = Default setting: Marks the current menu item only =
 
-The default setting is to output only the CSS classes for the current navigation menu item.
+The default setting is to output only the CSS classes for the navigation menu items of the current post and the current category.
 
 = Stops displaying CSS classes of parents and ancestors of menu items and category list items =
 
@@ -116,7 +116,7 @@ Yes, it does.
 
 Short answer: Normally not and if yes, you can take control of it.
 
-Long answer: The default settings print out only the CSS class for the current active menu item. If the theme's CSS uses also the other CSS classes and/or item ID attributes you will notice some undesirable visual effects on menus and category lists. In this case just find out which classes and/or IDs the theme uses and activate them via the plugin's options page until the effects disappear.
+Long answer: The default settings print out only the CSS class for the active menu items of the current post, page or current category. If the theme's CSS uses also the other CSS classes and/or item ID attributes you will notice some undesirable visual effects on menus and category lists. In this case just find out which classes and/or IDs the theme uses and activate them via the plugin's options page until the effects disappear.
 
 = What are the default settings of this plugin? =
 
@@ -149,6 +149,10 @@ If you want to contribute a translation of the plugin in your language it would 
 3. The third screenshot shows where you can find the link to the plugin's option page in the german version of WordPress.
 
 == Changelog ==
+= 3.4.1 =
+* added default values for the options introduced in version 3.4
+* updated German translation
+
 = 3.4 =
 * added option 'Print CSS class for each category list item'
 * added option 'Print CSS class for each category list item with category ID'
@@ -280,6 +284,9 @@ Successfully tested with WordPress 4.0
 * The plugin was released initially.
 
 == Upgrade Notice ==
+
+= 3.4.1 =
+Added default values for the options introduced in version 3.4
 
 = 3.4 =
 Added options for category lists and tested with WordPress 6.0

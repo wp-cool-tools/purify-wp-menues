@@ -96,7 +96,7 @@ class PWM_Default {
 	public function __construct() {
 
 		$this->hinjipwpm = 'hinjipwpm';
-		$this->version = '3.4';
+		$this->version = '3.4.1';
 		$this->settings_db_slug = 'purify_wp_menu_options_set';
 		$this->default_settings = array(
 			'pwpm_backward_compatibility_with_wp_page_menu' => 0,
@@ -129,6 +129,12 @@ class PWM_Default {
 			'pwpm_print_page_item' => 0,
 			'pwpm_print_page_item_has_children' => 0,
 			'pwpm_print_page_item_id' => 0,
+			'pwpm_print_cat_item' => 0,
+			'pwpm_print_cat_item_id' => 0,
+			'pwpm_print_current_cat' => 1,
+			'pwpm_print_current_cat_parent' => 0,
+			'pwpm_print_current_cat_ancestor' => 0,
+			'pwpm_do_not_print_cat_parent_as_ancestor' => 0,
 		);
 
 		$this->load_dependencies();
