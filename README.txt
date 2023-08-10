@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: plugin, navigation, menu, menus, navigation menus, page menus, category list, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
 Requires at least: 3.0
 Requires PHP: 5.2
-Tested up to: 6.2
+Tested up to: 6.3
 Stable tag: 3.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -152,6 +152,7 @@ If you want to contribute a translation of the plugin in your language it would 
 = 3.4.1 =
 * added default values for the options introduced in version 3.4
 * updated German translation
+* tested successfully up to WordPress 6.3
 
 = 3.4 =
 * added option 'Print CSS class for each category list item'
