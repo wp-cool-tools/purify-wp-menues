@@ -211,9 +211,6 @@ class PWM_Default {
 
 		$plugin_public = new PWM_Public( $this->get_hinjipwpm(), $this->get_version(), $this->get_stored_settings() );
 
-		//$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		//$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-		
 		// Purify WP custom menus
 		$this->loader->add_action( 'nav_menu_css_class', $plugin_public, 'purify_custom_menu_item_classes', 10, 2 );
 
