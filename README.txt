@@ -2,10 +2,10 @@
 Contributors: kybernetikservices,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: plugin, navigation, menu, menus, navigation menus, page menus, category list, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
-Requires at least: 3.0
+Requires at least: 4.6
 Requires PHP: 5.2
-Tested up to: 6.5
-Stable tag: 3.4.1
+Tested up to: 6.6
+Stable tag: 3.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,13 +81,8 @@ You can:
 
 = Languages =
 
-The user interface is available in
-
-* English
-* Spanish (Español), kindly drawn up by [Hector Cabrera](https://profiles.wordpress.org/hcabrera/)
-* German (Deutsch)
-
-Further translations are welcome. If you want to give in your translation please leave a notice in the [plugin's support forum](https://wordpress.org/support/plugin/purify-wp-menues).
+Purify WordPress Menus is available in multiple languages maintained by the amazing WordPress community.
+Your language is missing? Please be part of the community and help to translate Purify WordPress Menus on [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). Thank you!
 
 == Installation ==
 
@@ -99,12 +94,12 @@ Further translations are welcome. If you want to give in your translation please
 
 = Installation in detail =
 
-1. Download the zip file 'purify-wp-menues.zip' to you local computer.
-2. Unzip the zip file. You should find a new directory 'purify-wp-menues' with files and sub directories in it.
+1. Download the zip file 'purify-wp-menues.zip' to your local computer.
+2. Unzip the zip file. You should find a new directory 'purify-wp-menues' with files and subdirectories in it.
 3. Upload the directory 'purify-wp-menues' with all its content per FTP to your '/wp-content/plugins/' directory.
 4. Go to the 'Plugins' page in the admin panel of your WordPress site.
 5. Activate the plugin through the 'Plugins' menu in WordPress.
-6. If you want you can refine the plugin's output on the option page 'Purify WP Menus'. You will find the page under 'Settings' in the admin panel.
+6. If you want, you can refine the plugin's output on the option page 'Purify WP Menus'. You will find the page under 'Settings' in the admin panel.
 
 == Frequently Asked Questions ==
 
@@ -136,25 +131,30 @@ Yes. It does this way as default. You can activate the output of every menu item
 
 = Why is in page menus still the empty attribute `class=""` at every menu item? =
 
-Normally, if you deselect every checkbox for page menus on the plugin's options page, no class attribute should be there in page menus. But the WordPress files does not offer a gentle way to suppress the class attribute if it has no values. The plugin saves time and ressources by not trying an own way. If you would have a trick for deleting the empty class attibute with little effort, then please tell me about it.
+Normally, if you deselect every checkbox for page menus on the plugin's option page, no class attribute should be there in page menus. But the WordPress files do not offer a gentle way to suppress the class attribute if it has no values. The plugin saves time and ressources by not trying an own way. If you would have a trick for deleting the empty class attibute with little effort, then please tell me about it.
 
 = Where is the *.pot file for translating the plugin in any language? =
 
-If you want to contribute a translation of the plugin in your language it would be great! You would find the *.pot file in the 'languages' directory of this plugin. If you would send the *.po file to me I would include it in the next release of the plugin.
+The translations are handled on WordPress.org. Please be part of the community and help to translate Purify WordPress Menus on [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). Thank you!
 
 == Screenshots ==
 
 1. The first screenshot shows a sample of the results of the HTML output of `wp_nav_menu()` before and after activating the plugin.
-2. The second screenshot shows a part of the plugin's options page in german language.
+2. The second screenshot shows a part of the plugin's option page in the german language.
 3. The third screenshot shows where you can find the link to the plugin's option page in the german version of WordPress.
 
 == Changelog ==
+= 3.5.0 =
+* moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). So, please contribute as a translator to make Purify WordPress Menus available in more and more languages.
+* bummed required to WordPress 4.6
+* tested successfully up to WordPress 6.6
+
 = 3.4.1 =
 * added default values for the options introduced in version 3.4
 * updated German translation
-* tested successfully up to WordPress 6.3
+* tested successfully up to WordPress 6.3-6.5
 
-= 3.4 =
+= 3.4.0 =
 * added option 'Print CSS class for each category list item'
 * added option 'Print CSS class for each category list item with category ID'
 * added option 'Print CSS class for each current category list item'
@@ -286,6 +286,9 @@ Successfully tested with WordPress 4.0
 
 == Upgrade Notice ==
 
+= 3.5.0 =
+We switched the languages file support to WordPress.org and bummed the required WordPress version to 4.6..
+
 = 3.4.1 =
 Added default values for the options introduced in version 3.4
 
@@ -370,4 +373,4 @@ Tested with WordPress 3.8.2 and corrected a typo
 * Improved performance and german translation
 
 = 1.0 =
-No upgrade neccessary.
+No upgrade necessary.

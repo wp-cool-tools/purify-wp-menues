@@ -229,7 +229,7 @@ class PWM_Admin {
 		printf(
 			'<div class="updated notice is-dismissible"><p>%s</p></div>',
 			sprintf( 
-				esc_html__( 'Welcome to %s! You can find the plugin at %s.', 'hinjipwpm' ),
+				esc_html__( 'Welcome to %s! You can find the plugin at %s.', 'purify-wp-menues' ),
 				$this->plugin_name,
 				$link
 			)
@@ -294,188 +294,188 @@ class PWM_Admin {
 		// define the form sections, order by appereance, with headlines, and options
 		$this->form_structure = array(
 			'1st_section' => array(
-				'headline' => __( 'Current Page Navigation Menu Items', 'hinjipwpm' ),
-				'description' => __( 'In this section you control the CSS class Wordpress adds to the current menu item.', 'hinjipwpm' ),
+				'headline' => __( 'Current Page Navigation Menu Items', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control the CSS class Wordpress adds to the current menu item.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_print_current_menu_item' => array(
 						'title'   => '.current-menu-item',
-						'label'   => __( 'This class is added to menu items that correspond to the currently rendered page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to the currently rendered page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_page_item' => array(
 						'title'   => '.current_page_item',
-						'label'   => __( 'This class is added to page menu items that correspond to the currently rendered page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to page menu items that correspond to the currently rendered page.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 1st_section
 			'2nd_section' => array(
-				'headline' => __( 'General Menu Items', 'hinjipwpm' ),
-				'description' => __( 'In this section you control some general classes Wordpress adds to menu items.', 'hinjipwpm' ),
+				'headline' => __( 'General Menu Items', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control some general classes Wordpress adds to menu items.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_print_menu_item' => array(
 						'title'   => '.menu-item',
-						'label'   => __( 'This class is added to every menu item.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to every menu item.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_page_item' => array(
 						'title'   => '.page_item',
-						'label'   => __( 'This class is added to page menu items that correspond to a page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to page menu items that correspond to a page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_id_as_class' => array(
 						'title'   => '.menu-item-{id}',
-						'label'   => __( 'This class with the item id is added to every menu item.', 'hinjipwpm' ),
+						'label'   => __( 'This class with the item id is added to every menu item.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_page_item_id' => array(
 						'title'   => '.page-item-{id}',
-						'label'   => __( 'This class is added to page menu items that correspond to a page, where ID is the page ID.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to page menu items that correspond to a page, where ID is the page ID.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_home' => array(
 						'title'   => '.menu-item-home',
-						'label'   => __( 'This class is added to menu items that correspond to the site front page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to the site front page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_privacy-policy' => array(
 						'title'   => '.menu-item-privacy-policy',
-						'label'   => __( 'This class is added to menu items that correspond to the Privacy Policy page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to the Privacy Policy page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_id' => array(
 						'title'   => '#menu-item-{id}',
-						'label'   => __( 'The id of the menu item is added to every menu item of navigation menus.', 'hinjipwpm' ),
+						'label'   => __( 'The id of the menu item is added to every menu item of navigation menus.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 2nd_section
 			'3rd_section' => array(
-				'headline' => __( 'Current Page Parent Menu Items', 'hinjipwpm' ),
-				'description' => __( 'In this section you control the CSS classes Wordpress adds to the hierarchical parent of the current menu item.', 'hinjipwpm' ),
+				'headline' => __( 'Current Page Parent Menu Items', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control the CSS classes Wordpress adds to the hierarchical parent of the current menu item.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_print_current_menu_parent' => array(
 						'title'   => '.current-menu-parent',
-						'label'   => __( 'This class is added to menu items that correspond to the hierarchical parent of the currently rendered page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to the hierarchical parent of the currently rendered page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_page_parent' => array(
 						'title'   => '.current_page_parent',
-						'label'   => __( 'This class is added to page menu items that correspond to the hierarchical parent of the currently rendered page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to page menu items that correspond to the hierarchical parent of the currently rendered page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_object_any_parent' => array(
 						'title'   => '.current-{object}-parent',
-						'label'   => __( 'This class is added to menu items that correspond to the hierachical parent of the currently rendered object, where {object} corresponds to the the value used for .menu-item-object-{object}.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to the hierachical parent of the currently rendered object, where {object} corresponds to the the value used for .menu-item-object-{object}.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_type_any_parent' => array(
 						'title'   => '.current-{type}-parent',
-						'label'   => __( 'This class is added to menu items that correspond to the hierachical parent of the currently rendered type, where {type} corresponds to the the value used for .menu-item-type-{type}.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to the hierachical parent of the currently rendered type, where {type} corresponds to the the value used for .menu-item-type-{type}.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 3rd_section
 			'4th_section' => array(
-				'headline' => __( 'Current Page Ancestor Menu Items', 'hinjipwpm' ),
-				'description' => __( 'In this section you control the CSS classes Wordpress adds to the hierarchical anchestors of the current menu item.', 'hinjipwpm' ),
+				'headline' => __( 'Current Page Ancestor Menu Items', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control the CSS classes Wordpress adds to the hierarchical anchestors of the current menu item.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_print_current_menu_ancestor' => array(
 						'title'   => '.current-menu-ancestor',
-						'label'   => __( 'This class is added to menu items that correspond to a hierarchical ancestor of the currently rendered page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a hierarchical ancestor of the currently rendered page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_page_ancestor' => array(
 						'title'   => '.current_page_ancestor',
-						'label'   => __( 'This class is added to page menu items that correspond to a hierarchical ancestor of the currently rendered page.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to page menu items that correspond to a hierarchical ancestor of the currently rendered page.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_object_any_ancestor' => array(
 						'title'   => '.current-{object}-ancestor',
-						'label'   => __( 'This class is added to menu items that correspond to a hierachical ancestor of the currently rendered object, where {object} corresponds to the the value used for .menu-item-object-{object}.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a hierachical ancestor of the currently rendered object, where {object} corresponds to the the value used for .menu-item-object-{object}.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_type_any_ancestor' => array(
 						'title'   => '.current-{type}-ancestor',
-						'label'   => __( 'This class is added to menu items that correspond to a hierachical ancestor of the currently rendered type, where {type} corresponds to the the value used for .menu-item-type-{type}.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a hierachical ancestor of the currently rendered type, where {type} corresponds to the the value used for .menu-item-type-{type}.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_taxonomy_ancestor' => array(
 						'title'   => '.current-{taxonomy}-ancestor',
-						'label'   => __( 'This class is added to menu items that correspond to a hierachical ancestor of the currently taxonomy.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a hierachical ancestor of the currently taxonomy.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 4th_section
 			'5th_section' => array(
-				'headline' => __( 'All Other Navigation Menu Items', 'hinjipwpm' ),
-				'description' => __( 'In this section you control some all other classes Wordpress adds to menu items.', 'hinjipwpm' ),
+				'headline' => __( 'All Other Navigation Menu Items', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control some all other classes Wordpress adds to menu items.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_print_menu_item_object_page' => array(
 						'title'   => '.menu-item-object-page',
-						'label'   => __( 'This class is added to menu items that correspond to pages.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to pages.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_object_category' => array(
 						'title'   => '.menu-item-object-category',
-						'label'   => __( 'This class is added to menu items that correspond to a category.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a category.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_object_tag' => array(
 						'title'   => '.menu-item-object-tag',
-						'label'   => __( 'This class is added to menu items that correspond to a tag.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a tag.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_object_any' => array(
 						'title'   => '.menu-item-object-{object}',
-						'label'   => __( 'This class is added to every menu item, where {object} is either a post type or a taxonomy.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to every menu item, where {object} is either a post type or a taxonomy.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_object_custom' => array(
 						'title'   => '.menu-item-object-{custom}',
-						'label'   => __( 'This class is added to menu items that correspond to a custom post type or a custom taxonomy.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to a custom post type or a custom taxonomy.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_type_post_type' => array(
 						'title'   => '.menu-item-type-post_type',
-						'label'   => __( 'This class is added to menu items that correspond to post types, i.e. pages or custom post types.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to post types, i.e. pages or custom post types.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_type_taxonomy' => array(
 						'title'   => '.menu-item-type-taxonomy',
-						'label'   => __( 'This class is added to menu items that correspond to taxonomies, i.e. categories, tags, or custom taxonomies.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to taxonomies, i.e. categories, tags, or custom taxonomies.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_type_any' => array(
 						'title'   => '.menu-item-type-{type}',
-						'label'   => __( 'This class is added to menu items that correspond to any other type.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that correspond to any other type.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_menu_item_has_children' => array(
 						'title'   => '.menu-item-has-children',
-						'label'   => __( 'This class is added to menu items that have sub menu items.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to menu items that have sub menu items.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_page_item_has_children' => array(
 						'title'   => '.page_item_has_children',
-						'label'   => __( 'This class is added to page menu items that have sub menu items.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to page menu items that have sub menu items.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 5th_section
 			'6th_section' => array(
-				'headline' => __( 'Special Settings', 'hinjipwpm' ),
-				'description' => __( 'In this section you control some special settings.', 'hinjipwpm' ),
+				'headline' => __( 'Special Settings', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control some special settings.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_backward_compatibility_with_wp_page_menu' => array(
-						'title'   => __( 'Maintain backward compatibility with wp_page_menu().', 'hinjipwpm' ),
-						'label'   => __( 'Adds the CSS classes of page menus to navigation menus.', 'hinjipwpm' ),
+						'title'   => __( 'Maintain backward compatibility with wp_page_menu().', 'purify-wp-menues' ),
+						'label'   => __( 'Adds the CSS classes of page menus to navigation menus.', 'purify-wp-menues' ),
 					),
 					'pwpm_do_not_print_parent_as_ancestor' => array(
-						'title'   => __( 'Do not print parent as ancestor.', 'hinjipwpm' ),
-						'label'   => __( 'Does not classified the menu item which is the current parent as anchestor.', 'hinjipwpm' ),
+						'title'   => __( 'Do not print parent as ancestor.', 'purify-wp-menues' ),
+						'label'   => __( 'Does not classified the menu item which is the current parent as anchestor.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 6th_section
 			'7th_section' => array( // since version 3.4
-				'headline' => __( 'General Category List Items', 'hinjipwpm' ),
-				'description' => __( 'In this section you control the general classes Wordpress adds to category list items.', 'hinjipwpm' ),
+				'headline' => __( 'General Category List Items', 'purify-wp-menues' ),
+				'description' => __( 'In this section you control the general classes Wordpress adds to category list items.', 'purify-wp-menues' ),
 				'options' => array(
 					'pwpm_print_cat_item' => array(
 						'title'   => '.cat-item',
-						'label'   => __( 'This class is added to every category list item.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to every category list item.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_cat_item_id' => array(
 						'title'   => '.cat-item-{id}',
-						'label'   => __( 'This class with the item id is added to every category list item.', 'hinjipwpm' ),
+						'label'   => __( 'This class with the item id is added to every category list item.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_cat' => array(
 						'title'   => '.current-cat',
-						'label'   => __( 'This class is added to category list items that correspond to the currently rendered category.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to category list items that correspond to the currently rendered category.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_cat_parent' => array(
 						'title'   => '.current-cat-parent',
-						'label'   => __( 'This class is added to category list items that correspond to the hierarchical parent of the currently rendered category.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to category list items that correspond to the hierarchical parent of the currently rendered category.', 'purify-wp-menues' ),
 					),
 					'pwpm_print_current_cat_ancestor' => array(
 						'title'   => '.current-cat-ancestor',
-						'label'   => __( 'This class is added to category list items that correspond to a hierarchical ancestor of the currently rendered category.', 'hinjipwpm' ),
+						'label'   => __( 'This class is added to category list items that correspond to a hierarchical ancestor of the currently rendered category.', 'purify-wp-menues' ),
 					),
 					'pwpm_do_not_print_cat_parent_as_ancestor' => array(
-						'title'   => __( 'Do not print the category parent as the category ancestor.', 'hinjipwpm' ),
-						'label'   => __( 'Does not classified the category list item which is the current parent as anchestor.', 'hinjipwpm' ),
+						'title'   => __( 'Do not print the category parent as the category ancestor.', 'purify-wp-menues' ),
+						'label'   => __( 'Does not classified the category list item which is the current parent as anchestor.', 'purify-wp-menues' ),
 					),
 				),
 			), // end 7th_section

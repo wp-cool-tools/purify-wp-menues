@@ -96,7 +96,7 @@ class PWM_Default {
 	public function __construct() {
 
 		$this->hinjipwpm = 'hinjipwpm';
-		$this->version = '3.4.1';
+		$this->version = '3.5.0';
 		$this->settings_db_slug = 'purify_wp_menu_options_set';
 		$this->default_settings = array(
 			'pwpm_backward_compatibility_with_wp_page_menu' => 0,
@@ -138,7 +138,6 @@ class PWM_Default {
 		);
 
 		$this->load_dependencies();
-		$this->set_locale();
 		$this->get_stored_settings();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
@@ -151,7 +150,6 @@ class PWM_Default {
 	 * Include the following files that make up the plugin:
 	 *
 	 * - PWM_Loader. Orchestrates the hooks of the plugin.
-	 * - PWM_i18n. Defines internationalization functionality.
 	 * - PWM_Admin. Defines all hooks for the dashboard.
 	 * - PWM_Public. Defines all hooks for the public side of the site.
 	 *
@@ -168,25 +166,7 @@ class PWM_Default {
 	}
 
 	/**
-	 * Define the locale for this plugin for internationalization.
-	 *
-	 * Uses the PWM_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since    3.0
-	 * @access   private
-	 */
-	private function set_locale() {
-
-		$plugin_i18n = new PWM_i18n();
-		$plugin_i18n->set_domain( $this->get_hinjipwpm() );
-
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
-	}
-
-	/**
-	 * Register all of the hooks related to the dashboard functionality
+	 * Register all the hooks related to the dashboard functionality
 	 * of the plugin.
 	 *
 	 * @since    3.0
@@ -199,7 +179,7 @@ class PWM_Default {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		//$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-		// Add the options page and menu item.
+		// Add the option page and menu item.
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu' );
 
 		// Add an action link pointing to the options page.
@@ -252,7 +232,7 @@ class PWM_Default {
 	}
 
 	/**
-	 * Run the loader to execute all of the hooks with WordPress.
+	 * Run the loader to execute all the hooks with WordPress.
 	 *
 	 * @since    3.0
 	 */
