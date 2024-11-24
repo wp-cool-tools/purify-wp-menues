@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: plugin, navigation, menu, menus, navigation menus, page menus, category list, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
 Requires at least: 4.6
 Requires PHP: 5.2
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 3.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -147,7 +147,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 = 3.5.0 =
 * moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). So, please contribute as a translator to make Purify WordPress Menus available in more and more languages.
 * bummed required to WordPress 4.6
-* tested successfully up to WordPress 6.6
+* tested successfully up to WordPress 6.6-6.7
 
 = 3.4.1 =
 * added default values for the options introduced in version 3.4
