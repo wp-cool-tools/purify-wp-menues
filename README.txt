@@ -31,9 +31,6 @@ If you are very concerned about the loading time of your website and you do not 
 * **Number 6** in [13 Great Free HTML Widgets for WordPress](http://wpaisle.com/wordpress-widgets/free-html-widgets-for-wordpress/) by sam on August 27, 2014
 * **Number 8** in [10 Magnificent Free Menus Widgets for WordPress](http://creativevore.com/wordpress/free-menus-widgets-for-wordpress/) by jatin on July 26, 2014
 
-= Demo =
-You want to test Purify WordPress Menus before installing on your site? Try it out on your free dummy site and [click here](https://demo.tastewp.com/purify-wp-menues).
-
 = No undesirable visual effects =
 
 The visual appearance of menus and category lists in the frontend remains unchanged in most cases. If you should see an undesirable visual effect to the menus and category lists in your theme, then you can activate the needed CSS classes on the plugin's options page.
@@ -147,7 +144,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 = 3.5.0 =
 * moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). So, please contribute as a translator to make Purify WordPress Menus available in more and more languages.
 * bummed required to WordPress 4.6
-* tested successfully up to WordPress 6.6-6.7
+* tested successfully up to WordPress 6.6-7.0
 
 = 3.4.1 =
 * added default values for the options introduced in version 3.4
