@@ -1,7 +1,7 @@
-=== Purify WordPress Menus ===
+=== Purify Menus ===
 Contributors: kybernetikservices,wpcooltools,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
-Tags: plugin, navigation, menu, menus, navigation menus, page menus, category list, navigation menu, page menu, wordpress, html, css, optimization, optimisation, slim html, purification
+Tags: navigation menu, menus, page speed, performance, css
 Requires at least: 4.6
 Requires PHP: 5.2
 Tested up to: 7.0
