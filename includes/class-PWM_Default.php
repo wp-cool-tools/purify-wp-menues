@@ -274,8 +274,8 @@ class PWM_Default {
 			$this->current_settings = get_option( $this->settings_db_slug, false );
 			// if empty array, set and store default values
 			if ( false === $this->current_settings ) {
-				// store default values in the db
-				add_option( $this->settings_db_slug, $this->default_settings );
+				// Autoload settings because frontend menu filters use them on every request.
+				add_option( $this->settings_db_slug, $this->default_settings, '', true );
 				// set settings to defaults
 				$this->current_settings = $this->default_settings;
 			} else {

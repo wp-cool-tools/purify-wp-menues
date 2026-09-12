@@ -140,6 +140,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 
 == Changelog ==
 = 3.6.0 =
+* explicitly enabled autoloading for settings used by frontend menu filters on every request
 * raised the minimum required PHP version to 5.6 to cover the use of __DIR__
 * used strict ancestor class matching and preserved the first menu class when no ancestor class is found
 * corrected translation text domains, literal strings and numbered activation notice placeholders
