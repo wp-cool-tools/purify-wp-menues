@@ -323,10 +323,11 @@ class PWM_Public {
 
 		// delete ancestor class if users does not wish it on parent items
 		if ( isset( $this->settings['pwpm_do_not_print_parent_as_ancestor'] ) && 1 == $this->settings['pwpm_do_not_print_parent_as_ancestor'] && $item_is_parent ) {
-			// regular expression search on array values
-			$key = array_search( 'current_page_ancestor', $classes );
-			// delete ancestor classes if found
-			unset( $classes[ $key ] );
+			// Match the exact class and preserve other classes when it is absent.
+			$key = array_search( 'current_page_ancestor', $classes, true );
+			if ( false !== $key ) {
+				unset( $classes[ $key ] );
+			}
 		}
 
 		// Returns the classes for the item

@@ -140,6 +140,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 
 == Changelog ==
 = 3.6.0 =
+* used strict ancestor class matching and preserved the first menu class when no ancestor class is found
 * corrected translation text domains, literal strings and numbered activation notice placeholders
 * added translator guidance for the activation notice placeholders
 * replaced the deprecated multisite lookup with get_sites() and restored the site context after each uninstall cleanup
