@@ -141,6 +141,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 == Changelog ==
 = 3.6.0 =
 * added direct file access prevention
+* escaped activation notice output and restricted settings field HTML to the required checkbox and label markup
 
 = 3.5.0 =
 * moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). So, please contribute as a translator to make Purify WordPress Menus available in more and more languages.

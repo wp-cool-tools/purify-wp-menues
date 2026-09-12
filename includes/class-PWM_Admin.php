@@ -201,7 +201,7 @@ class PWM_Admin {
 			$link = sprintf(
 				'<a href="%s">%s %s %s</a>',
 				esc_url( admin_url( sprintf( 'options-general.php?page=%s', $this->hinjipwpm ) ) ),
-				$this->plugin_name,
+				esc_html( $this->plugin_name ),
 				$sep,
 				esc_html__( $text )
 			);
@@ -213,7 +213,7 @@ class PWM_Admin {
 				esc_url( admin_url( sprintf( 'options-general.php?page=%s', $this->hinjipwpm ) ) ),
 				esc_html__( $text ),
 				$sep,
-				$this->plugin_name
+				esc_html( $this->plugin_name )
 			);
 		}
 		
@@ -222,8 +222,8 @@ class PWM_Admin {
 			'<div class="updated notice is-dismissible"><p>%s</p></div>',
 			sprintf( 
 				esc_html__( 'Welcome to %s! You can find the plugin at %s.', 'purify-wp-menues' ),
-				$this->plugin_name,
-				$link
+				esc_html( $this->plugin_name ),
+				wp_kses_post( $link )
 			)
 		);
 		
@@ -534,13 +534,28 @@ class PWM_Admin {
 	} // end register_options()
 
 	/**
-	* Print the option
-	*
-	* @since   1.0
-	*
-	*/
-	public function print_option ( $args ) {
-		echo $args[ 'html' ];
+	 * Print the option using only the required form markup.
+	 *
+	 * @since 1.0
+	 * @param array $args Settings field arguments, including the HTML markup.
+	 */
+	public function print_option( $args ) {
+		// Preserve checkbox fields while removing unsafe tags and attributes.
+		echo wp_kses(
+			$args['html'],
+			array(
+				'input' => array(
+					'type'    => true,
+					'id'      => true,
+					'name'    => true,
+					'value'   => true,
+					'checked' => true,
+				),
+				'label' => array(
+					'for' => true,
+				),
+			)
+		);
 	}
 
 	/**
