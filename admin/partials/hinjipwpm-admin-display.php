@@ -1,9 +1,8 @@
 <?php
-
 /**
  * Provide a dashboard view for the plugin
  *
- * This file is used to markup the public-facing aspects of the plugin.
+ * This file is used to mark up the public-facing aspects of the plugin.
  *
  * @link       https://www.kybernetik-services.com
  * @since      3.0
@@ -11,6 +10,8 @@
  * @package    Hinjipwpm
  * @subpackage Hinjipwpm/admin/partials
  */
+
+if (!defined('ABSPATH')) exit;
 ?>
 
 <div class="wrap">

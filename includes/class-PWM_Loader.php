@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Register all actions and filters for the plugin
- *
- * @link       https://www.kybernetik-services.com
- * @since      3.0
- *
- * @package    Hinjipwpm
- * @subpackage Hinjipwpm/includes
- */
-
 /**
  * Register all actions and filters for the plugin.
  *
@@ -21,6 +10,9 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
+
+if (!defined('ABSPATH')) exit;
+
 class PWM_Loader {
 
 	/**

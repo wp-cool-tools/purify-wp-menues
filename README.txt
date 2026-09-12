@@ -5,7 +5,7 @@ Tags: navigation menu, menus, page speed, performance, css
 Requires at least: 4.6
 Requires PHP: 5.2
 Tested up to: 7.1
-Stable tag: 3.5.0
+Stable tag: 3.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,8 +14,6 @@ Improve page speed by letting slim down the HTML code of menus and category list
 == Description ==
 
 Improve page speed by letting slim down the HTML code of menus and category lists to the only CSS classes and attributes your theme needs.
-
-The plugin is available in English, Spanish (Español) and German (Deutsch).
 
 = Less code, higher page speed =
 
@@ -141,6 +139,9 @@ The translations are handled on WordPress.org. Please be part of the community a
 3. The third screenshot shows where you can find the link to the plugin's option page in the german version of WordPress.
 
 == Changelog ==
+= 3.6.0 =
+* added direct file access prevention
+
 = 3.5.0 =
 * moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). So, please contribute as a translator to make Purify WordPress Menus available in more and more languages.
 * bummed required to WordPress 4.6

@@ -1,15 +1,4 @@
 <?php
-
-/**
- * The public-facing functionality of the plugin.
- *
- * @link       https://www.kybernetik-services.com
- * @since      3.0
- *
- * @package    Hinjipwpm
- * @subpackage Hinjipwpm/public
- */
-
 /**
  * The public-facing functionality of the plugin.
  *
@@ -20,6 +9,9 @@
  * @subpackage Hinjipwpm/public
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
+
+if (!defined('ABSPATH')) exit;
+
 class PWM_Public {
 
 	/**

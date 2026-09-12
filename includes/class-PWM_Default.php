@@ -1,18 +1,4 @@
 <?php
-
-/**
- * The file that defines the core plugin class
- *
- * A class definition that includes attributes and functions used across both the
- * public-facing side of the site and the dashboard.
- *
- * @link       https://www.kybernetik-services.com
- * @since      3.0
- *
- * @package    Hinjipwpm
- * @subpackage Hinjipwpm/includes
- */
-
 /**
  * The core plugin class.
  *
@@ -27,6 +13,9 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
+
+if (!defined('ABSPATH')) exit;
+
 class PWM_Default {
 
 	/**
@@ -96,7 +85,7 @@ class PWM_Default {
 	public function __construct() {
 
 		$this->hinjipwpm = 'hinjipwpm';
-		$this->version = '3.5.0';
+		$this->version = '3.6.0';
 		$this->settings_db_slug = 'purify_wp_menu_options_set';
 		$this->default_settings = array(
 			'pwpm_backward_compatibility_with_wp_page_menu' => 0,

@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Fired during plugin activation
- *
- * @link       https://www.kybernetik-services.com
- * @since      3.0
- *
- * @package    Hinjipwpm
- * @subpackage Hinjipwpm/includes
- */
-
 /**
  * Fired during plugin activation.
  *
@@ -20,6 +9,9 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
+
+if (!defined('ABSPATH')) exit;
+
 class PWM_Activator {
 
 	/**
@@ -30,7 +22,6 @@ class PWM_Activator {
 	public static function activate() {
 		// store the flag into the db to trigger the display of a message after activation
 		set_transient( 'purify_wp_menues', '1', 60 );
-
 	}
 
 }

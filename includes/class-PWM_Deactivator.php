@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Fired during plugin deactivation
- *
- * @link       https://www.kybernetik-services.com
- * @since      3.0
- *
- * @package    Hinjipwpm
- * @subpackage Hinjipwpm/includes
- */
-
 /**
  * Fired during plugin deactivation.
  *
@@ -20,6 +9,9 @@
  * @subpackage Hinjipwpm/includes
  * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
+
+if (!defined('ABSPATH')) exit;
+
 class PWM_Deactivator {
 
 	/**
