@@ -238,6 +238,7 @@ class PWM_Admin {
 		printf(
 			'<div class="updated notice is-dismissible"><p>%s</p></div>',
 			sprintf( 
+				/* translators: 1: Plugin name, 2: Link to the plugin settings page. */
 				esc_html__( 'Welcome to %s! You can find the plugin at %s.', 'purify-wp-menues' ),
 				esc_html( $this->plugin_name ),
 				wp_kses_post( $link )

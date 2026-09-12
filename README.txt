@@ -140,6 +140,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 
 == Changelog ==
 = 3.6.0 =
+* added translator guidance for the activation notice placeholders
 * replaced the deprecated multisite lookup with get_sites() and restored the site context after each uninstall cleanup
 * added direct file access prevention
 * escaped activation notice output and restricted settings field HTML to the required checkbox and label markup
