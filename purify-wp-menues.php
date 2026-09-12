@@ -12,7 +12,7 @@
  * Description:       Slim down the HTML code of WordPress menus to only the CSS classes and ID attributes your theme needs to improve page speed
  * Version:           3.6.0
  * Requires at least: 4.6
- * Requires PHP:      5.2
+ * Requires PHP:      5.6
  * Author:            Kybernetik Services
  * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=purify-wp-menues&utm_content=author
  * License:           GPL-2.0-or-later

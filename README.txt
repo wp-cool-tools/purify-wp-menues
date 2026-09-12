@@ -3,7 +3,7 @@ Contributors: kybernetikservices,wpcooltools,Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: navigation menu, menus, page speed, performance, css
 Requires at least: 4.6
-Requires PHP: 5.2
+Requires PHP: 5.6
 Tested up to: 7.1
 Stable tag: 3.6.0
 License: GPL-2.0-or-later
@@ -140,6 +140,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 
 == Changelog ==
 = 3.6.0 =
+* raised the minimum required PHP version to 5.6 to cover the use of __DIR__
 * used strict ancestor class matching and preserved the first menu class when no ancestor class is found
 * corrected translation text domains, literal strings and numbered activation notice placeholders
 * added translator guidance for the activation notice placeholders
