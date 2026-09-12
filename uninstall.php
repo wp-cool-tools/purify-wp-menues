@@ -47,21 +47,13 @@ if ( false === array_search ( dirname( plugin_basename( __FILE__ ) ) . '/purify_
 // clean up the database considering multisite installation
 if ( is_multisite() ) {
 
-	// get registered site IDs
-	$site_ids = array();
-	if ( version_compare( get_bloginfo( 'version' ), '4.6', '>=' ) ) {
-		$sites = get_sites();
-		foreach ( $sites as $site ) {
-			$site_ids[] = $site->id;
-		}
-	} else {
-		$sites = wp_get_sites();
-		foreach ( $sites as $site ) {
-			$site_ids[] = $site[ 'blog_id' ];
-		}
-	}
-
-	if ( empty ( $site_ids ) ) return;
+	// Retrieve all site IDs using the API available since WordPress 4.6.
+	$site_ids = get_sites(
+		array(
+			'fields' => 'ids',
+			'number' => 0,
+		)
+	);
 
 	foreach ( $site_ids as $site_id ) {
 		// switch to next blog
@@ -69,9 +61,10 @@ if ( is_multisite() ) {
 
 		// remove settings
 		delete_option( 'purify_wp_menu_options_set' );
+
+		// Restore the previous site after each switch.
+		restore_current_blog();
 	}
-	// restore the current blog, after calling switch_to_blog()
-	restore_current_blog();
 } else {
 	// remove settings
 	delete_option( 'purify_wp_menu_options_set' );

@@ -6,7 +6,7 @@ Requires at least: 4.6
 Requires PHP: 5.2
 Tested up to: 7.1
 Stable tag: 3.6.0
-License: GPLv2 or later
+License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Improve page speed by letting slim down the HTML code of menus and category lists to the only CSS classes and attributes your theme needs.
@@ -140,6 +140,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 
 == Changelog ==
 = 3.6.0 =
+* replaced the deprecated multisite lookup with get_sites() and restored the site context after each uninstall cleanup
 * added direct file access prevention
 * escaped activation notice output and restricted settings field HTML to the required checkbox and label markup
 * removed activation notice dependence on URL parameters and limited notice display and transient consumption to administrators with settings access
