@@ -178,15 +178,8 @@ class PWM_Default {
 		// define the options
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'register_options' );
 
-		// hook on displaying a message after plugin activation
-		// if single activation via link or multisite activation
-		if ( isset( $_GET[ 'activate' ] ) or isset( $_GET[ 'activate-multi' ] ) ) {
-			$plugin_was_activated = get_transient( 'purify_wp_menues' );
-			if ( false !== $plugin_was_activated ) {
-				$this->loader->add_action( 'admin_notices', $plugin_admin, 'display_activation_message' );
-				delete_transient( 'purify_wp_menues' );
-			}
-		}
+		// Check the server-side activation flag when admin notices are rendered.
+		$this->loader->add_action( 'admin_notices', $plugin_admin, 'maybe_display_activation_message' );
 	}
 
 	/**

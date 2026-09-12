@@ -187,6 +187,23 @@ class PWM_Admin {
 	}
 
 	/**
+	 * Display the pending activation notice to users who can manage settings.
+	 */
+	public function maybe_display_activation_message() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		// Activation is recorded by the activation hook, not by request parameters.
+		if ( false === get_transient( 'purify_wp_menues' ) ) {
+			return;
+		}
+
+		$this->display_activation_message();
+		delete_transient( 'purify_wp_menues' );
+	}
+
+	/**
 	 * Print a message about the location of the plugin in the WP backend
 	 * 
 	 * @since    2.0
