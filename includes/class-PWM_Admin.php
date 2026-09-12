@@ -210,8 +210,6 @@ class PWM_Admin {
 	 */
 	public function display_activation_message () {
 
-		$text = 'Settings';
-		
 		if ( is_rtl() ) {
 			$sep = '&lsaquo;';
 			// set link #2
@@ -220,7 +218,7 @@ class PWM_Admin {
 				esc_url( admin_url( sprintf( 'options-general.php?page=%s', $this->hinjipwpm ) ) ),
 				esc_html( $this->plugin_name ),
 				$sep,
-				esc_html__( $text )
+				esc_html__( 'Settings', 'purify-wp-menues' )
 			);
 		} else {
 			$sep = '&rsaquo;';
@@ -228,7 +226,7 @@ class PWM_Admin {
 			$link = sprintf(
 				'<a href="%s">%s %s %s</a>',
 				esc_url( admin_url( sprintf( 'options-general.php?page=%s', $this->hinjipwpm ) ) ),
-				esc_html__( $text ),
+				esc_html__( 'Settings', 'purify-wp-menues' ),
 				$sep,
 				esc_html( $this->plugin_name )
 			);
@@ -239,7 +237,7 @@ class PWM_Admin {
 			'<div class="updated notice is-dismissible"><p>%s</p></div>',
 			sprintf( 
 				/* translators: 1: Plugin name, 2: Link to the plugin settings page. */
-				esc_html__( 'Welcome to %s! You can find the plugin at %s.', 'purify-wp-menues' ),
+				esc_html__( 'Welcome to %1$s! You can find the plugin at %2$s.', 'purify-wp-menues' ),
 				esc_html( $this->plugin_name ),
 				wp_kses_post( $link )
 			)
@@ -254,8 +252,7 @@ class PWM_Admin {
 	 */
 	public function add_plugin_admin_menu() {
 		
-		$label = 'Settings';
-		$page_title = sprintf( '%s: %s', $this->plugin_name, __( $label ) );
+		$page_title = sprintf( '%s: %s', $this->plugin_name, __( 'Settings', 'purify-wp-menues' ) );
 
 		// Add a settings page for this plugin to the Settings menu.
 		$this->plugin_screen_id = add_options_page(
@@ -275,12 +272,10 @@ class PWM_Admin {
 	 */
 	public function add_action_links( $links ) {
 
-		$label = 'Settings';
-		
 		return array_merge(
 			$links,
 			array(
-				'settings' => '<a href="' . esc_url ( admin_url( 'options-general.php?page=df' . $this->hinjipwpm ) ) . '">' . esc_html__( $label ) . '</a>'
+				'settings' => '<a href="' . esc_url( admin_url( 'options-general.php?page=df' . $this->hinjipwpm ) ) . '">' . esc_html__( 'Settings', 'purify-wp-menues' ) . '</a>'
 			)
 		);
 
