@@ -35,8 +35,8 @@ submit_button();
 			<div class="th_content">
 				<h2><?php esc_html_e( 'Credits and informations', 'purify-wp-menues' ); ?></h2>
 				<dl>
-					<dt><?php esc_html_e( 'Do you like the plugin?', 'purify-wp-menues' ); ?></dt><dd><a href="http://wordpress.org/support/view/plugin-reviews/purify-wp-menues"><?php esc_html_e( 'Rate it at wordpress.org!', 'purify-wp-menues' ); ?></a></dd>
-					<dt><?php esc_html_e( 'Do you need support or have an idea for the plugin?', 'purify-wp-menues' ); ?></dt><dd><a href="http://wordpress.org/support/plugin/purify-wp-menues"><?php esc_html_e( 'Post your questions and ideas about Purify WordPress Menus in the forum at wordpress.org!', 'purify-wp-menues' ); ?></a></dd>
+					<dt><?php esc_html_e( 'Do you like the plugin?', 'purify-wp-menues' ); ?></dt><dd><a href="http://wordpress.org/support/view/plugin-reviews/purify-wp-menues" aria-label="<?php esc_html_e( 'Rate it at wordpress.org!', 'purify-wp-menues' ); ?>"><?php esc_html_e( 'Rate it at wordpress.org!', 'purify-wp-menues' ); ?></a></dd>
+					<dt><?php esc_html_e( 'Do you need support or have an idea for the plugin?', 'purify-wp-menues' ); ?></dt><dd><a href="http://wordpress.org/support/plugin/purify-wp-menues" aria-label="<?php esc_html_e( 'Post your questions and ideas about Purify WordPress Menus in the forum at wordpress.org!', 'purify-wp-menues' ); ?>"><?php esc_html_e( 'Post your questions and ideas about Purify WordPress Menus in the forum at wordpress.org!', 'purify-wp-menues' ); ?></a></dd>
 				</dl>
 			</div><!-- .th_content -->
 		</div><!-- #th_footer -->

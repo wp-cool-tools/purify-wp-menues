@@ -149,6 +149,7 @@ The translations are handled on WordPress.org. Please be part of the community a
 * added direct file access prevention
 * escaped activation notice output and restricted settings field HTML to the required checkbox and label markup
 * removed activation notice dependence on URL parameters and limited notice display and transient consumption to administrators with settings access
+* improved accessibility and added screenreader text
 
 = 3.5.0 =
 * moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/purify-wp-menues/). So, please contribute as a translator to make Purify WordPress Menus available in more and more languages.
